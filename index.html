@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute Input Mode</title>
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="common.css" />
+  </head>
+  <body>
+    <main>
+      <form action="#">
+        <div class="form-group">
+          <label for="name"> Nama </label>
+          <input
+            type="name"
+            name="name"
+            id="name"
+            autocomplete="cc-name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label> Card Number </label>
+          <input
+            type="text"
+            inputmode="numeric"
+            name="card-number"
+            id="card-number"
+            autocomplete="cc-number"
+            required
+            pattern="[0-9]+"
+          />
+        </div>
+
+        <div class="form-group date-code">
+          <div>
+            <label for="expiry-date"> Expiry Date </label>
+            <input
+              type="text"
+              id="expiry-date"
+              class="expiry-date"
+              name="expiry-date"
+              autocomplete="cc-exp"
+              required
+              placeholder="MM/YY"
+              minlength="4"
+              pattern="[0-9/]+"
+            />
+          </div>
+          <div>
+            <label for="security-code"> Security Code </label>
+            <input
+              type="text"
+              inputmode="numeric"
+              id="security-code"
+              name="security-code"
+              required
+              minlength="3"
+              maxlength="4"
+              pattern="[0-9]+"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button class="btn">Bayar Sekarang</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
